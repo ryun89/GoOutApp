@@ -9,13 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Image("sunny_background")
+                .resizable()
+                .ignoresSafeArea()
+                .scaledToFill()
+            
+            VStack {
+                Text("今日の浜松の天気")
+                    .frame(width: .infinity, height: 150)
+                    .offset(x: 10, y: -250)
+                    .font(.system(size: 35))
+                    .lineLimit(1)
+                    
+                HStack {
+                    Image(systemName: "sun.max")
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .offset(x: 10, y: -280)
+                    Text("21℃")
+                        .frame(width: 150, height: 150)
+                        .offset(x: 20, y: -280)
+                        .font(.system(size: 72))
+                }
+            }
         }
-        .padding()
     }
 }
 
