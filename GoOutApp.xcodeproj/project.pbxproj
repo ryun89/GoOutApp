@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEBA38E0B4ED756E9994EF4D /* Pods_GoOutApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF96F00E6C20EE6E5DDF423D /* Pods_GoOutApp.framework */; };
 		EE79882C2B61192300E2774C /* GoOutAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE79882B2B61192300E2774C /* GoOutAppApp.swift */; };
 		EE79882E2B61192300E2774C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE79882D2B61192300E2774C /* ContentView.swift */; };
 		EE7988302B61192400E2774C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE79882F2B61192400E2774C /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3AC375516BF416296FC1EC3 /* Pods-GoOutApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoOutApp.release.xcconfig"; path = "Target Support Files/Pods-GoOutApp/Pods-GoOutApp.release.xcconfig"; sourceTree = "<group>"; };
+		DF96F00E6C20EE6E5DDF423D /* Pods_GoOutApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoOutApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4D21B606F6935395FE0793 /* Pods-GoOutApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoOutApp.debug.xcconfig"; path = "Target Support Files/Pods-GoOutApp/Pods-GoOutApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7988282B61192300E2774C /* GoOutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoOutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE79882B2B61192300E2774C /* GoOutAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoOutAppApp.swift; sourceTree = "<group>"; };
 		EE79882D2B61192300E2774C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBA38E0B4ED756E9994EF4D /* Pods_GoOutApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B5EB6498333B910BF98E3FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE4D21B606F6935395FE0793 /* Pods-GoOutApp.debug.xcconfig */,
+				D3AC375516BF416296FC1EC3 /* Pods-GoOutApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5596A778783809F9D3443EA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF96F00E6C20EE6E5DDF423D /* Pods_GoOutApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE79881F2B61192300E2774C = {
 			isa = PBXGroup;
 			children = (
 				EE79882A2B61192300E2774C /* GoOutApp */,
 				EE7988292B61192300E2774C /* Products */,
+				0B5EB6498333B910BF98E3FD /* Pods */,
+				5596A778783809F9D3443EA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE7988362B61192400E2774C /* Build configuration list for PBXNativeTarget "GoOutApp" */;
 			buildPhases = (
+				ACBBF7BD22D4DB85103A3830 /* [CP] Check Pods Manifest.lock */,
 				EE7988242B61192300E2774C /* Sources */,
 				EE7988252B61192300E2774C /* Frameworks */,
 				EE7988262B61192300E2774C /* Resources */,
+				5C805985A2883D21E1BFCC94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C805985A2883D21E1BFCC94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoOutApp/Pods-GoOutApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoOutApp/Pods-GoOutApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoOutApp/Pods-GoOutApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACBBF7BD22D4DB85103A3830 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoOutApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE7988242B61192300E2774C /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		EE7988372B61192400E2774C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4D21B606F6935395FE0793 /* Pods-GoOutApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +359,7 @@
 		};
 		EE7988382B61192400E2774C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3AC375516BF416296FC1EC3 /* Pods-GoOutApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
